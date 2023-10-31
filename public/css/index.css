@@ -1,0 +1,74 @@
+.header-container {
+    background-color: #532c78;
+    color: #fff;
+    text-align: center; /* Center text */
+    padding: 5px;
+}
+
+.form-container {
+    max-width: 400px;
+    max-height: 380px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* body img {
+    background-image: url('/public/images/purple.jpg');
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+} */
+
+.form-container input[type="text"],
+.form-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container button[type="submit"] {
+    background-color: #532c78;
+    color: white;
+    padding: 15px 40px;
+    margin-top: 20px;
+    margin-left: 125px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.table-container {
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.table-container button[type="submit"] {
+    background-color: #532c78;
+    color: white;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
