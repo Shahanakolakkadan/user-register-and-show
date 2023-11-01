@@ -13,14 +13,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/register', [RegisterController::class,"reg"]);
 
-// Route::get('/sign-up', [RegisterController::class,"index"] );
+Route::get('/turtlebowl', function() {
+    return view("turtlebowl");
+});
 
 Route::get('/signup', [RegisterController::class,"index"]);
 Route::post('/signup', [RegisterController::class,"store"]);
+Route::get('/homepage', [RegisterController::class, 'homepage']);
+Route::post('/homepage', [RegisterController::class, 'store']);
 Route::delete('/register/{id}', [RegisterController::class,"delete"])->name('delete.register');
+
 
 
 

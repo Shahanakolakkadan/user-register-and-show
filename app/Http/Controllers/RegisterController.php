@@ -4,25 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Register;
+use App\Http\Requests\UserRequest;
 
 class RegisterController extends Controller
 {
-    public function index() {
-        $registerData = Register::all();  
-        return view('index',['registerData' => $registerData]);
+    function reg() {
+        $register = Register::get();
+        dd($register);
     }
-    public function store(Request $request)
+    public function index() {
+        // $registerData = Register::all();  
+        return view('index');
+    }
+    public function store(UserRequest $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone_no' => 'required',
-            'place' => 'required',
-        ]);
-
-        Register::create($validatedData);
-
-        return redirect('/signup')->with('success', 'User registered successfully!');
+        Register::create($request->validated());
+        return redirect('/homepage')->with('success', 'User registered successfully!');
+    }
+    public function homepage() {
+        $registerData = Register::all();  
+        return view('homepage',['registerData' => $registerData]);
     }
     public function delete($id) {
         $data = Register::find($id);
@@ -32,8 +33,8 @@ class RegisterController extends Controller
         }
         return redirect()->back()->with('error', 'Record not found');
     }
-    function reg() {
-        $register = Register::get();
-        dd($register);
+    public function yourControllerMethod(UserRequest $request)
+    {
+    
     }
 }

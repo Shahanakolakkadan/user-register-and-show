@@ -1,0 +1,22 @@
+.video-background {
+    width: 360px;
+    height: 496px;
+    flex-shrink: 0;
+}
+
+#videoBG {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 1440px;
+    height: 611px;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+}
+
+/* .content {
+    position: relative;
+    z-index: 1;
+} */

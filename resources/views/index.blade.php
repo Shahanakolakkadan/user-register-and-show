@@ -2,58 +2,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <Title>Homepage</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <Title>Register</title>
 </head>
 <body>
-    <!-- <img src="{{ asset('images/purple.jpg') }}" alt="Example Image"> -->
     <div class="header-container">
         <h1>USER REGISTRATION</h1>
     </div>
     <div class="form-container">
-        <form method="POST" action="/signup">
+        <form id="myForm" method="POST" action="/homepage">
             @csrf
-            <label>Name:</label>
-            <input type="text" name="name" placeholder="Name"><br>
-            <label>Email ID:</label>
-            <input type="email" name="email" placeholder="Email"><br>
-            <label>Phone No:</label>
-            <input type="text" name="phone_no" placeholder="Phone no"><br>
-            <label>place:</label>
-            <input type="text" name="place" placeholder="Place"><br>
+            <!-- <label>Name:</label> -->
+            <label for="name">Name: </label>
+            <span id="name_error" class="error-message" style="display: none">*This field is required</span>
+            <input type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Name"><br>
+            @error('name')
+                <div class="error-message">*This field is required</div>
+            @enderror
+            <label for="email">Email ID: </label>
+            <span id="email_error" class="error-message" style="display: none">*This field is required</span>
+            <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email"><br>
+            @error('email')
+                <div class="error-message">*This field is required</div>
+            @enderror
+            <label for="phone_no">Phone No:</label>
+            <span id="phone_no_error" class="error-message" style="display: none">*This field is required</span>
+            <input type="text" id="phone_no" name="phone_no" value="{{ old('phone_no') }}" placeholder="Phone no">
+            @error('phone_no')
+                <div class="error-message">*This field is required</div>
+            @enderror
+            <label for="place">place:</label>
+            <span id="place_error" class="error-message" style="display: none">*This field is required</span>
+            <input type="text" id="place" name="place" value="{{ old('place') }}" placeholder="Place"><br>
+            @error('place')
+                <div class="error-message">*This field is required</div>
+            @enderror
             <button type="submit">Submit</button>
         </form>
+        <!-- <img src="{{ asset('images/purple.jpg') }}" alt="Example Image"> -->
     </div>
-    <div class="table-container">
-        <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>Place</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($registerData as $data)
-            <tr>
-                <td>{{ $data->name }}</td>
-                <td>{{ $data->email }}</td>
-                <td>{{ $data->phone_no }}</td>
-                <td>{{ $data->place }}</td>
-                <td>
-                    <form action="{{ route('delete.register', $data->id) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit">Delete</button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-        </div>
-        </table>
-    </div>
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>
