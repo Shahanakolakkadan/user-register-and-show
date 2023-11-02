@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <title>Bootstrap Example</title> -->
-    <!-- <link rel="stylesheet" href="{{asset('videos/turtlebowl.css')}}">
-    <link rel="stylesheet" href="{{asset('videos/turtlebowl.css')}}"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>turtlebowl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/turtlebowl.css') }}">
 </head>
 <body>
-<div class="body-container">
-    <div class="video-background">
-        <video autoplay muted loop id="videoBG">
-            <source src="{{ asset('videos/banner_video.mp4') }}" type="video/mp4">
-        </video>
-    </div>   
-
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo">
+                <div class="sidebar-icon">
+                    <img src="{{ asset('images/Group1.svg') }}" alt="Sidebar Icon">
+                </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-12 content">
+                <h1>Hello, this is a mobile resolution page!</h1>
+            </div>
+    </div>
 </div>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

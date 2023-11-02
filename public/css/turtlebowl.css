@@ -1,22 +1,34 @@
-.video-background {
-    width: 360px;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container-fluid {
+    padding: 0;
+    margin: 0;
     height: 496px;
-    flex-shrink: 0;
-}
+    width: 100vw; 
+    background-color: rgb(211, 124, 124);
 
-#videoBG {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: 1440px;
-    height: 611px;
-    transform: translate(-50%, -50%);
-    z-index: -100;
 }
+.logo {
+    max-width: 100px; 
+    width: 188px;
+    height: 22px;
+    top: 14.97px;
+    left: 15px;
 
-/* .content {
-    position: relative;
-    z-index: 1;
-} */
+    /* height: auto;
+    margin: 10px; */
+}
+.sidebar-icon {
+    float: right;
+    margin: 10px;
+}
+.sidebar-icon img {
+    width: 50px; 
+    height: 50px;
+}
+.content {
+    padding: 20px;
+}
