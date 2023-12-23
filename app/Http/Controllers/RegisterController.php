@@ -7,7 +7,7 @@ use App\Models\Register;
 use App\Http\Requests\UserRequest;
 
 class RegisterController extends Controller
-{
+{ 
     function reg() {
         $register = Register::get();
         dd($register);

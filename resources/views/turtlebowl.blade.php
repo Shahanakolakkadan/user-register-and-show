@@ -17,9 +17,9 @@
         </div>
     </div>
     <div class="row">
-            <div class="col-12 content">
-                <h1>Hello, this is a mobile resolution page!</h1>
-            </div>
+        <div class="col-12 content">
+            <h1>Hello, this is a mobile resolution page!</h1>
+        </div>
     </div>
 </div>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

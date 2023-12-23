@@ -10,7 +10,7 @@
     <div class="header-container">
         <h1>USER REGISTRATION</h1>
     </div>
-    <div class="form-container">
+    <div class="form-container"> 
         <form id="myForm" method="POST" action="/homepage">
             @csrf
             <!-- <label>Name:</label> -->

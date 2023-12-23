@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/register', [RegisterController::class,"reg"]);
-
+ 
 Route::get('/turtlebowl', function() {
     return view("turtlebowl");
 });
